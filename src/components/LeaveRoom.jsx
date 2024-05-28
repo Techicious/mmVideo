@@ -55,7 +55,10 @@ export const LeaveRoom = () => {
 
   const leaveRoom = () => {
     hmsActions.leave();
-    redirectToLeavePage();
+    // redirectToLeavePage();
+    if (window.Flutter) {
+      window.Flutter.postMessage('EndCall');
+    }
   };
 
   const endRoom = () => {
