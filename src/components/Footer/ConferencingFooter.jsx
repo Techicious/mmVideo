@@ -50,7 +50,7 @@ export const ConferencingFooter = () => {
       <AppFooter.Center>
         <AudioVideoToggle />
         <ScreenshareToggle />
-        {/* <PIP /> */}
+        <PIP />
         {/* <MoreSettings /> */}
         <Flex
           align="center"
