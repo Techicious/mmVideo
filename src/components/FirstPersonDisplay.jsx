@@ -13,7 +13,7 @@ export const FirstPersonDisplay = React.memo(() => {
         h: "100%",
         r: "$3",
         m: "0 auto",
-        backgroundImage: `url(${PlaceholderBg})`,
+        // backgroundImage: `url(${PlaceholderBg})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         "@md": {
@@ -35,21 +35,21 @@ export const FirstPersonDisplay = React.memo(() => {
         }}
       >
         <Text color="white" variant="h4" css={{ "@md": { fontSize: "$md" } }}>
-          Welcome!
+          Welcome to Mind Meadow
         </Text>
         <Text
           color="white"
           variant="h6"
           css={{ mt: "$4", "@md": { fontSize: "$sm" } }}
         >
-          You’re the first one here.
+          {/* You’re the first one here. */}
         </Text>
         <Text
           color="white"
           variant="h6"
           css={{ mt: "$2", "@md": { fontSize: "$sm" } }}
         >
-          Sit back and relax till the others join.
+          Therapist will join shortly!
         </Text>
       </Flex>
     </Box>

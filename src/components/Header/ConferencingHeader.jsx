@@ -25,7 +25,7 @@ export const ConferencingHeader = ({ isPreview }) => {
           gap: "$4",
         }}
       >
-        <StreamActions />
+        {/* <StreamActions /> */}
         <ParticipantCount />
       </Flex>
     </Flex>

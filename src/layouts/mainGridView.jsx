@@ -83,6 +83,7 @@ export const MainGridView = () => {
     <Flex
       css={{
         size: "100%",
+        position: "relative",
       }}
       direction={{
         "@initial": "row",
@@ -101,7 +102,10 @@ export const MainGridView = () => {
             totalPeers={peers.length}
           />
           {showSidePane && (
-            <GridSidePaneView peers={sidebarPeers} totalPeers={peers.length} />
+            <GridSidePaneView
+              peers={sidebarPeers}
+              totalPeers={peers.length}
+            />
           )}
         </>
       )}

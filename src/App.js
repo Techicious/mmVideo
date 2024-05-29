@@ -33,7 +33,8 @@ import { FeatureFlags } from "./services/FeatureFlags";
 const Conference = React.lazy(() => import("./components/conference"));
 const PreviewScreen = React.lazy(() => import("./components/PreviewScreen"));
 
-const defaultTokenEndpoint = "https://prod-in2.100ms.live/hmsapi/mindmeadow-appointment.app.100ms.live/";
+const defaultTokenEndpoint =
+  "https://prod-in2.100ms.live/hmsapi/mindmeadow-appointment.app.100ms.live/";
 const envPolicyConfig = JSON.parse(process.env.REACT_APP_POLICY_CONFIG || "{}");
 
 let appName;

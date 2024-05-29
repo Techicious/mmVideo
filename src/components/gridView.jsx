@@ -3,11 +3,12 @@ import { useMedia } from "react-use";
 import { Box, config as cssConfig, Flex } from "@100mslive/roomkit-react";
 import { FirstPersonDisplay } from "./FirstPersonDisplay";
 import { Image } from "./Image";
+import Draggable from 'react-draggable';
 import VideoList from "./VideoList";
 import { useAppConfig } from "./AppData/useAppConfig";
 import { useIsHeadless } from "./AppData/useUISettings";
 
-const MAX_TILES_FOR_MOBILE = 4;
+const MAX_TILES_FOR_MOBILE = 2;
 
 /**
  * the below variables are for showing webinar etc. related image if required on certain meeting urls
@@ -67,12 +68,14 @@ export const GridCenterView = ({ peers, maxTileCount }) => {
 };
 
 // Side pane shows smaller tiles
-export const GridSidePaneView = ({ peers }) => {
+export const GridSidePaneView = ({ peers, customCss }) => {
   const headlessConfig = useAppConfig("headlessConfig");
   const isHeadless = useIsHeadless();
   return (
+    <Draggable handle=".handle">
     <Flex
       direction="column"
+      className="handle"
       css={{
         flex: "0 0 20%",
         mx: isHeadless && Number(headlessConfig?.tileOffset) === 0 ? "0" : "$8",
@@ -82,6 +85,15 @@ export const GridSidePaneView = ({ peers }) => {
         "@md": {
           flex: "1 1 0",
         },
+        position: "absolute", // Ensure it's positioned absolutely
+        top: 0, // Position at the top
+        left: 0, // Position at the left
+        width: "150px", // Set a specific width
+        height: "250px", // Set a specific height
+        // backgroundColor: "white", // Optional: add background color
+        boxShadow: "0px 0px 0px rgba(0, 0, 0, 0.1)", // Optional: add shadow
+        cursor: "move",
+        ...customCss, // Allow custom styles to be passed
       }}
     >
       <Flex css={{ flex: "1 1 0" }} align="end">
@@ -90,5 +102,6 @@ export const GridSidePaneView = ({ peers }) => {
         )}
       </Flex>
     </Flex>
+    </Draggable>
   );
 };

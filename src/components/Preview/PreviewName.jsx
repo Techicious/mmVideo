@@ -17,9 +17,10 @@ const PreviewName = ({ name, onChange, onJoin, enableJoin }) => {
         placeholder="Enter your name"
         autoFocus
         autoComplete="name"
+        disabled
       />
       <Button type="submit" disabled={!name || !enableJoin} onClick={onJoin}>
-        {isStreamingKit() ? "Join Studio" : "Join Room"}
+        {isStreamingKit() ? "Join Studio" : "Join"}
       </Button>
     </Form>
   );

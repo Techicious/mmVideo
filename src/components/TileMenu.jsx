@@ -180,7 +180,7 @@ const TileMenu = ({
                 audioTrackID={audioTrackID}
                 videoTrackID={videoTrackID}
               />
-              {showSpotlight && <SpotlightActions peerId={peerID} />}
+              {/* {showSpotlight && <SpotlightActions peerId={peerID} />} */}
             </>
           )
         ) : (
@@ -211,7 +211,7 @@ const TileMenu = ({
                 <span>{isAudioEnabled ? "Mute" : "Request Unmute"}</span>
               </StyledMenuTile.ItemButton>
             ) : null}
-            {audioTrackID ? (
+            {/* {audioTrackID ? (
               <StyledMenuTile.VolumeItem data-testid="participant_volume_slider">
                 <Flex align="center" gap={1}>
                   <SpeakerIcon />
@@ -226,17 +226,17 @@ const TileMenu = ({
                   onValueChange={e => setVolume(e[0])}
                 />
               </StyledMenuTile.VolumeItem>
-            ) : null}
+            ) : null} */}
             {showPinAction && (
               <>
                 <PinActions
                   audioTrackID={audioTrackID}
                   videoTrackID={videoTrackID}
                 />
-                {showSpotlight && <SpotlightActions peerId={peerID} />}
+                {/* {showSpotlight && <SpotlightActions peerId={peerID} />} */}
               </>
             )}
-            <SimulcastLayers trackId={videoTrackID} />
+            {/* <SimulcastLayers trackId={videoTrackID} /> */}
             {removeOthers ? (
               <StyledMenuTile.RemoveItem
                 onClick={async () => {

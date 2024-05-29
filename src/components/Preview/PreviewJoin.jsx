@@ -210,9 +210,9 @@ export const PreviewControls = () => {
     >
       <Flex css={{ gap: "$4" }}>
         <AudioVideoToggle compact />
-        <VirtualBackground />
+        {/* <VirtualBackground /> */}
       </Flex>
-      <PreviewSettings />
+      {/* <PreviewSettings /> */}
     </Flex>
   );
 };

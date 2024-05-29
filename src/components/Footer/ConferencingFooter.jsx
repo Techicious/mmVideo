@@ -28,10 +28,10 @@ export const ConferencingFooter = () => {
   return (
     <AppFooter.Root>
       <AppFooter.Left>
-        <ToggleWidgets />
+        {/* <ToggleWidgets /> */}
         <Playlist type={HMSPlaylistType.audio} />
         <Playlist type={HMSPlaylistType.video} />
-        <VirtualBackground />
+        {/* <VirtualBackground /> */}
         {FeatureFlags.enableTranscription ? <TranscriptionButton /> : null}
         <Flex
           align="center"
@@ -43,15 +43,15 @@ export const ConferencingFooter = () => {
             },
           }}
         >
-          {isMobile && <EmojiReaction />}
-          <MetaActions isMobile />
+          {/* {isMobile && <EmojiReaction />} */}
+          {/* <MetaActions isMobile /> */}
         </Flex>
       </AppFooter.Left>
       <AppFooter.Center>
         <AudioVideoToggle />
         <ScreenshareToggle />
-        <PIP />
-        <MoreSettings />
+        {/* <PIP /> */}
+        {/* <MoreSettings /> */}
         <Flex
           align="center"
           css={{ display: "none", "@md": { display: "flex" } }}
@@ -61,8 +61,8 @@ export const ConferencingFooter = () => {
         <LeaveRoom />
       </AppFooter.Center>
       <AppFooter.Right>
-        {!isMobile && <EmojiReaction />}
-        <MetaActions />
+        {/* {!isMobile && <EmojiReaction />} */}
+        {/* <MetaActions /> */}
         <ChatToggle />
       </AppFooter.Right>
     </AppFooter.Root>
