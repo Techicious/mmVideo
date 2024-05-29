@@ -31,7 +31,7 @@ export const ConferencingFooter = () => {
         {/* <ToggleWidgets /> */}
         <Playlist type={HMSPlaylistType.audio} />
         <Playlist type={HMSPlaylistType.video} />
-        isMobile && <PIP />
+        {/* <PIP /> */}
         {/* <VirtualBackground /> */}
         {FeatureFlags.enableTranscription ? <TranscriptionButton /> : null}
         <Flex
@@ -46,13 +46,13 @@ export const ConferencingFooter = () => {
         >
           {/* {isMobile && <EmojiReaction />} */}
           {/* <MetaActions isMobile /> */}
-          isMobile && <PIP />
+          {/* <PIP /> */}
         </Flex>
       </AppFooter.Left>
       <AppFooter.Center>
         <AudioVideoToggle />
         <ScreenshareToggle />
-        isMobile && <PIP />
+        {/* <PIP /> */}
         {/* <MoreSettings /> */}
         <Flex
           align="center"
@@ -66,7 +66,6 @@ export const ConferencingFooter = () => {
         {/* {!isMobile && <EmojiReaction />} */}
         {/* <MetaActions /> */}
         <ChatToggle />
-        isMobile && <PIP />
       </AppFooter.Right>
     </AppFooter.Root>
   );
